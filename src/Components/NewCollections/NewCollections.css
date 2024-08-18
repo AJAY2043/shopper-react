@@ -1,0 +1,59 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap for better separation */
+    margin-bottom: 100px; /* Space below the section */
+    padding: 0 20px; /* Added padding on the sides */
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 36px; /* Adjusted font size for better readability */
+    font-weight: 600;
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margin */
+}
+
+.new-collections hr {
+    width: 150px; /* Adjusted width for consistency */
+    height: 4px; /* Adjusted height for a more subtle line */
+    border-radius: 10px;
+    background: #252525;
+    margin: 10px auto; /* Center the line */
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between grid items */
+    width: 100%; /* Ensure the grid spans full width */
+    max-width: 1200px; /* Limit max width for better layout control */
+    margin-top: 20px; /* Reduced margin-top for consistency */
+}
+
+.item {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff; /* Background color for the item */
+    overflow: hidden; /* Hide overflow to ensure clean edges */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Smooth transition for image effects */
+}
+
+.item:hover {
+    transform: scale(1.02); /* Slightly enlarge item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}

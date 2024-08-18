@@ -1,0 +1,48 @@
+/* Container for the description box section */
+.descriptionbox {
+    margin: 40px auto; /* Adjusted margin for responsiveness and centering */
+    max-width: 1200px; /* Ensure content does not stretch too wide on large screens */
+    padding: 0 20px; /* Added padding for responsiveness */
+}
+
+/* Navigator section styling */
+.descriptionbox-navigator {
+    display: flex;
+    border-bottom: 1px solid #d0d0d0; /* Border for visual separation */
+    margin-bottom: 20px; /* Space between navigator and description */
+}
+
+/* Navigation box styling */
+.descriptionbox-nav-box {
+    flex: 1; /* Distribute space equally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px; /* Adjusted height */
+    border: 1px solid #d0d0d0;
+    border-bottom: none; /* Remove bottom border for the active tab */
+    background: #fff; /* Background for better readability */
+    cursor: pointer;
+}
+
+/* Active tab styling */
+.descriptionbox-nav-box.fade {
+    background: #FBFBFB;
+    color: #555;
+}
+
+/* Description section styling */
+.discriptionbox-discription {
+    border: 1px solid #d0d0d0;
+    padding: 20px; /* Reduced padding for better fit */
+    border-radius: 5px; /* Rounded corners */
+    background: #fff; /* Background color for readability */
+}
+
+/* Paragraph styling in the description */
+.discriptionbox-discription p {
+    line-height: 1.6; /* Improved line spacing for readability */
+    margin: 0 0 20px; /* Space between paragraphs */
+}

@@ -1,0 +1,33 @@
+.relatedproducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 20px; /* Added padding */
+    margin-bottom: 100px; /* Space below the section */
+}
+
+.relatedproducts h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center; /* Center-align text for better visual appeal */
+    margin: 0;
+}
+
+.relatedproducts hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+    margin: 10px auto; /* Center the line */
+}
+
+.relatedproduct-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Space between items */
+    width: 100%; /* Ensure items span full width */
+    max-width: 1200px; /* Optional: limit max width for better layout control */
+    margin-top: 20px; /* Reduced margin-top */
+}

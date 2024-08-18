@@ -1,0 +1,74 @@
+.newsletter {
+    width: 80%;
+    max-width: 1200px; /* Ensures the component does not become too wide on large screens */
+    height: auto; /* Adjust height automatically based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 20px; /* Responsive padding */
+    margin-bottom: 100px;
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea 60%);
+    border-radius: 12px; /* Added border radius for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    gap: 20px; /* Reduced gap for better spacing */
+}
+
+.newsletter h1 {
+    color: #454545;
+    font-size: 40px; /* Adjusted font size for better readability */
+    font-weight: 600;
+    text-align: center; /* Center-align text for better visual appeal */
+}
+
+.newsletter p {
+    color: #454545;
+    font-size: 18px; /* Adjusted font size for consistency */
+    text-align: center; /* Center-align text for better visual appeal */
+    margin: 0 0 20px 0; /* Reduced bottom margin */
+}
+
+.newsletter div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+    max-width: 700px; /* Limited max width for better responsiveness */
+    height: 60px; /* Adjusted height */
+    border-radius: 30px; /* Reduced border radius for a softer look */
+    border: 1px solid #e3e3e3;
+    padding: 0 20px; /* Added padding for inner spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.newsletter input {
+    flex: 1; /* Make input take up available space */
+    margin-right: 20px; /* Adjust margin for spacing between input and button */
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 0 15px; /* Added padding inside the input */
+    border-radius: 30px; /* Rounded corners for input */
+}
+
+.newsletter button {
+    width: auto; /* Allow button width to adjust based on content */
+    height: 50px; /* Reduced height */
+    padding: 0 20px; /* Adjust padding for better size */
+    border-radius: 25px; /* Reduced border radius for a softer look */
+    background: black;
+    color: white;
+    font-size: 14px; /* Adjusted font size */
+    font-weight: 500; /* Slightly lighter font weight */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.newsletter button:hover {
+    background: #333; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}

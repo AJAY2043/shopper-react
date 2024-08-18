@@ -1,0 +1,61 @@
+.shop-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.shopcategory-banner {
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your design */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopcategory-indexsort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.shopcategory-indexsort p {
+    color: #454545;
+    font-size: 16px;
+    margin: 0;
+}
+
+.shopcategory-sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #ff4141;
+    font-size: 16px;
+}
+
+.shopcategory-sort img {
+    margin-left: 8px;
+}
+
+.shopcategory-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust to ensure items fit well */
+    gap: 20px; /* Space between items */
+    width: 100%;
+    max-width: 1200px; /* Constrain the max-width */
+    padding: 0 20px; /* Add padding on the sides */
+    box-sizing: border-box;
+    margin-top: 20px; /* Ensure there's space above the products */
+}
+
+.shopcategory-loadmore {
+    color: #ff4141;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
