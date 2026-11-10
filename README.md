@@ -1,73 +1,90 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./assets/banner.png" alt="Shopper — fashion storefront with cart and category browsing" width="100%" />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-0A1024?style=flat-square&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router-0A1024?style=flat-square&logo=reactrouter&logoColor=CA4245)
+![Context API](https://img.shields.io/badge/Context_API-0A1024?style=flat-square&logo=react&logoColor=22D3EE)
+![Styled Components](https://img.shields.io/badge/Styled_Components-0A1024?style=flat-square&logo=styledcomponents&logoColor=DB7093)
+![Status](https://img.shields.io/badge/stage-learning_build-7C4DFF?style=flat-square&labelColor=0A1024)
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Shopper** is a fashion storefront — new arrivals, popular items, three shopping categories and a working cart. A compact build focused on getting cart mechanics right rather than on breadth of features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Preview
 
-### `npm test`
+![Shopper storefront](./assets/preview-home.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<sub>Screenshot captured from a local production build of this repository.</sub>
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Three categories** — Men, Women, Kids — each on its own route
+- **Product detail route** (`/product/:productId`)
+- **Working cart** with add, remove, running item count and order total, all computed in a Context provider:
+  - `addToCart` / `removeFromCart`
+  - `getTotalCartItems` — the badge in the header
+  - `getTotalCartAmount` — the order summary
+- **Landing sections** — hero, new collection, popular items, offers, newsletter
+- **Login route** as an entry point
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Layer | Technology |
+|---|---|
+| Framework | React (Create React App) |
+| Routing | React Router DOM — 8 routes |
+| State | React Context (`ShopContext`) — no Redux despite the dependency list |
+| Styling | Styled Components and hand-written CSS |
 
-### `npm run eject`
+## Project structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── Components/      Navbar, Hero, Popular, NewCollections,
+│                    Offers, NewsLetter, Item, Footer, CartItems
+├── Pages/           Shop, ShopCategory, Product, Cart, LoginSignup
+├── Context/
+│   └── ShopContext.jsx   Cart state, totals, product list
+└── App.js           8 route definitions
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/AJAY2043/shopper-react.git
+cd shopper-react
+npm install
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build     # production build into ./build
+```
 
-## Learn More
+## What this is, honestly
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A **front-end learning build**. The cart maths is real and works; everything behind it is not:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Products are a bundled array, not a catalogue service
+- No checkout, payment or orders
+- Login is a form with no authentication behind it
+- `redux`, `react-redux`, `@reduxjs/toolkit`, `react-query`, `axios` and `formik` are declared in `package.json` but never imported
 
-### Code Splitting
+## Future improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Persist the cart to `localStorage` so it survives a reload
+- Add size and quantity selection on the product page
+- Add a checkout flow and an order summary step
+- Fetch products from an API — the `axios` and `react-query` dependencies were presumably added for this
+- Remove the unused dependencies until they are actually needed
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# shopper" 
-"# shopper" 
-"# shopper-react" 
+**Ajay Krishna Reddy Bhavanam** — Melbourne, Australia
+[LinkedIn](https://linkedin.com/in/ajay-krishna-reddy) · [GitHub](https://github.com/AJAY2043)
